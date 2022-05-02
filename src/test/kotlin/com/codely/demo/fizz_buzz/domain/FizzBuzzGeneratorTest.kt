@@ -1,4 +1,4 @@
-package com.codely.demo.fizz_buzz
+package com.codely.demo.fizz_buzz.domain
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test

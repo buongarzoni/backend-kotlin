@@ -1,4 +1,4 @@
-package com.codely.demo.fizz_buzz
+package com.codely.demo.fizz_buzz.domain
 
 private const val MULTIPLES_OF_THREE_MESSAGE = "Fizz"
 private const val MULTIPLES_OF_FIVE_MESSAGE = "Buzz"
