@@ -5,6 +5,7 @@ plugins {
     id("com.diffplug.spotless") version "5.7.0"
     id("org.springframework.boot") version "2.4.4"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
+    id("info.solidsoft.pitest") version "1.7.0"
     kotlin("plugin.spring") version "1.4.32"
     application
 }
@@ -24,6 +25,7 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+
     implementation("junit:junit:4.13.1")
     implementation("junit:junit:4.13.1")
     runtimeOnly("com.h2database:h2")
@@ -31,6 +33,13 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.mockito:mockito-core:3.3.3")
 }
+
+pitest {
+    setProperty("junit5PluginVersion", "0.12")
+    setProperty("testPlugin", "junit5")
+    setProperty("outputFormats", listOf("HTML"))
+}
+
 application {
     mainClass.set("com.codely.demo.CodelyberKt")
 }
